@@ -1,0 +1,73 @@
+body {
+  background: rgba(210,255,82,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: red;
+}
+
+.logo {
+  text-align: center;
+}
+
+.lucky-cat{
+  text-align: center;
+  height: 20px;
+}
+.savDisplay {
+  display: inline-block;
+  font-size: 17px;
+}
+
+.chqDisplay {
+  display: inline-block;
+  font-size: 17px;
+}
+
+.savInput {
+  display: block;
+  padding: 2%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.chqInput {
+  display: block;
+  padding: 2%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cheque-container {
+  display: inline-block;
+  float: right;
+  padding: 7%;
+}
+
+.savings-container {
+  display: inline-block;
+  padding: 7%;
+}
+
+.chq-wdl-btn {
+  margin: 0 auto;
+  float: right;
+}
+
+.sav-wdl-btn {
+  margin: 0 auto;
+  float: right;
+}
+
+.savings-btn {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
