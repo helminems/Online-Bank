@@ -52,20 +52,28 @@ chqDepBtn.addEventListener('click', chqDep);
 
 var chqWdl = function() {
   var chqInput = document.querySelector('.chqInput');
+  var savInput = document.querySelector('.savInput');
+  savings;
+  totalBalance;
   chq = chq - +chqInput.value;
-  chqDisplay.innerHTML = 'Balance Amount ' + '$' + chq;
-  if (chq < +chqInput.value){
+  totalBalance = savings + chq;
+  if (chq <= 0) {
     chq = 0;
-    savings = savings - +chqInput.value;
-    chqDisplay.innerHTML = 'Balance Amount ' + '$' + chq;
-    savDisplay.innerHTML = 'Savings Balance ' + '$' + savings;
+    savings = (totalBalance - chqInput.value) + +chqInput.value;
+    console.log(chq);
+    console.log(totalBalance);
+    console.log(savings);
+    chqDisplay.innerHTML = 'Insufficient Funds!';
     chqInput.style.backgroundColor = "pink";
   }
-  if (savings < +chqInput.value && chq === 0){
+  chqDisplay.innerHTML = 'Balance Amount ' + '$' + chq;
+  savDisplay.innerHTML = 'Balance Amount ' + '$' + savings;
+  if (savings <= 0 && chq === 0) {
     savings = 0;
-    savDisplay.innerHTML = 'Balance Amount ' + '$' + chq;
+    chqDisplay.innerHTML = 'Insufficient Funds!';
+    savDisplay.innerHTML = 'Insufficient Funds!';
     chqInput.style.backgroundColor = "pink";
-    chqDisplay.innerHTML = 'Insufficient Funds!'
+    savInput.style.backgroundColor = "pink";
   }
 };
 chqWdlBtn.addEventListener('click', chqWdl);
